@@ -1,6 +1,6 @@
 # PhpUnit implementation
 
-*PhpUnit implementation of this* **[Tests strategy](../TESTS_STRATEGY.md)**
+*PhpUnit implementation compliant to this* **[Tests strategy](../TESTS_STRATEGY.md)**
 
 ## Configuration reference
 ```xml
