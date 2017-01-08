@@ -4,18 +4,10 @@ Readme container
 ## Strategies
 
 <a name="strategy-folders"></a>
-### [Folders strategy](./strategy/folders/README.md)
-
-   > * [Php]()
-   >   * [Project]()
-   >   * [Library]()
+### [Folders](./strategy/folders/README.md)
 
 <a name="strategy-autoloading"></a>
-### [Autoloading strategy](./strategy/autoloading/README.md)
-
-   > * [Php]()
-   >   * [Source]()
-   >   * [Dev]()
+### [Autoloading](./strategy/autoloading/README.md)
 
 <a name="strategy-tests"></a>
-### [Tests stategy](./strategy/tests/README.md)
+### [Tests](./strategy/tests/README.md)
