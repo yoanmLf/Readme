@@ -19,6 +19,7 @@
    * [Base namespace](#rules-base-namespace)
  * [Example](#example)
  * [Implementations](#implementations)
+   * [Repository](#implementations-repository)
    * [PhpUnit](#implementations-phpunit)
    * [Behat](#implementations-behat)
    * [Composer](#implementations-composer)
@@ -223,6 +224,8 @@ A test for ExampleHelper class must have one of the following path and namespace
 
 ## Implementations
 
+<a name="implementations-repository"></a>
+ * [Repository](https://github.com/yoanm/initPhpRepository)
 <a name="implementations-phpunit"></a>
  * [PhpUnit](https://github.com/yoanm/initRepositoryWithPhpUnit)
 <a name="implementations-behat"></a>
