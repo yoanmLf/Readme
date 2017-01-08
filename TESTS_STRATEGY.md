@@ -190,23 +190,23 @@ Let's say we have a class called `ExampleHelper` with the following namespace `V
 A test for ExampleHelper class must have one of the following path and namespace:
 
  * Technical Unit test
-    * namespace `Technical\Unit\VendorNamespace\ProjectNamespace\Helper`
+    * namespace `Technical\Unit\VendorNamespace\ProjectNamespace\Helper\ExampleHelperTest`
     * path `tests/Technical/Unit/Helper/ExampleHelperTest.php`
  * Technical Integration test
-    * namespace `Technical\Integration\VendorNamespace\ProjectNamespace\Helper`
+    * namespace `Technical\Integration\VendorNamespace\ProjectNamespace\Helper\ExampleHelperTest`
     * path `tests/Technical/Integration/Helper/ExampleHelperTest.php`
  * Functional test - Phpunit only
-    * namespace `Functional\VendorNamespace\ProjectNamespace\Helper`
+    * namespace `Functional\VendorNamespace\ProjectNamespace\Helper\ExampleHelperTest`
     * path `tests/Functional/Helper/ExampleHelperTest.php`
  
  Or
-    * namespace `Functional\VendorNamespace\ProjectNamespace`
+    * namespace `Functional\VendorNamespace\ProjectNamespace\*TestedFunctionalityName*Test`
     * path `tests/Functional/*TestedFunctionalityName*Test.php`
 
 
 A Behat context must have the following namespace and path:
  * Path `features/bootstrap/MyContext.php`
- * Namespace `Functional\VendorNamespace\ProjectNamespace\BehatContext`
+ * Namespace `Functional\VendorNamespace\ProjectNamespace\BehatContext\MyContext`
  
 
 ## Implementations
