@@ -167,7 +167,7 @@ A test must not impact another (and so a test must not expect that another has b
 
 ### Base namespace
 
-*See [Composer config example](example-composer-configuration-example)*
+*See [Composer config example](#example-composer-configuration-example)*
 
 #### Technical tests
  * **Unit level** : `Technical\Unit\VendorNamespace\ProjectNamespace`
