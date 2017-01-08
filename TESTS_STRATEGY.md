@@ -68,7 +68,7 @@ Tests will use the complete repository source code and will perform tests to cov
 
 ## Rules 
 
-*See [Phpunit config example](example-phpunit-configuration-example)*
+*See [Phpunit](#implementations-phpunit) and [Behat](#implementations-behat) implementations*
 
 <a name="rules-early-stop"></a>
 ### Early stop
