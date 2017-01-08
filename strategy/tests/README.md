@@ -1,4 +1,4 @@
-# Tests Strategy
+# Tests strategy
 
  * [Explanation](#explanation)
    * [Technical tests](#technical-tests-explanation)
