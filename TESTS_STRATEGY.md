@@ -18,6 +18,7 @@
  * [Example](#example)
  * [Implementations](#implementations)
    * [PhpUnit](#implementations-phpunit)
+   * [PhpUnit](#implementations-behat)
    * [Composer](#implementations-composer)
 
 ## Explanation
@@ -208,7 +209,12 @@ A Behat context must have the following namespace and path:
 ## Implementations
 <a name="implementations-phpunit"></a>
 ### PhpUnit
-See [there](./TestStrategy/PHPUNIT_IMPLEMENTATION.md)
+See [there](https://github.com/yoanm/initRepositoryWithPhpUnit)
+
+
+<a name="implementations-behat"></a>
+### Behat
+See [there](https://github.com/yoanm/initRepositoryWithBehat)
 
 <a name="implementations-composer"></a>
 ### Composer
