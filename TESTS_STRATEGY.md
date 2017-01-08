@@ -12,9 +12,9 @@
    * [Tests isolation](#rules-tests-isolation)
    * [Real coverage](#rules-real-coverage)
    * [Test documentation](#rules-test-documentation)
-   * [Tests Root directory](#tests-root-directory)
-   * [Tests order](#tests-order)
-   * [Base namespace](#base-namespace)
+   * [Tests Root directory](#rules-tests-root-directory)
+   * [Tests order](#rules-tests-order)
+   * [Base namespace](#rules-base-namespace)
  * [Example](#example)
  * [Implementations](#implementations)
    * [PhpUnit](#implementations-phpunit)
@@ -134,6 +134,7 @@ A test must not impact another (and so a test must not expect that another has b
 <a name="rules-test-documentation-tested-class-dependencies-description"></a>
  * *A test class should describe what are the tested class dependencies used during tests*
 
+<a name="rules-tests-root-directory"></a>
 ### Tests root directory
 **Behat** folder : `features/`
 
@@ -151,6 +152,7 @@ A test must not impact another (and so a test must not expect that another has b
    
   * **Features** root directory : `features/SOMETHING/` (`SOMETHING` could be `methods` for an API project for instance)
    
+<a name="rules-tests-order"></a>
 ### Tests order
  * To have the smaller execution time, run tests from faster to slower.
  * Order to run tests : 
@@ -167,6 +169,7 @@ A test must not impact another (and so a test must not expect that another has b
 
      4 - With **Behat** : Slower than previous ones
 
+<a name="rules-base-namespace"></a>
 ### Base namespace
 
 *See [Composer implementation](#implementations-composer)*
