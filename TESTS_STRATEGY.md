@@ -18,7 +18,7 @@
  * [Example](#example)
  * [Implementations](#implementations)
    * [PhpUnit](#implementations-phpunit)
-   * [PhpUnit](#implementations-behat)
+   * [Behat](#implementations-behat)
    * [Composer](#implementations-composer)
 
 ## Explanation
