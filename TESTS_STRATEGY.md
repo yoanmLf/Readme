@@ -210,15 +210,10 @@ A Behat context must have the following namespace and path:
  
 
 ## Implementations
+
 <a name="implementations-phpunit"></a>
-### PhpUnit
-See [there](https://github.com/yoanm/initRepositoryWithPhpUnit)
-
-
+ * [PhpUnit](https://github.com/yoanm/initRepositoryWithPhpUnit)
 <a name="implementations-behat"></a>
-### Behat
-See [there](https://github.com/yoanm/initRepositoryWithBehat)
-
+ * [Behat](https://github.com/yoanm/initRepositoryWithBehat)
 <a name="implementations-composer"></a>
-### Composer
-See [there](https://github.com/yoanm/initRepositoryWithComposer)
+ * [Composer](https://github.com/yoanm/initRepositoryWithComposer)
