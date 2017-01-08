@@ -5,6 +5,8 @@
      * [Unit level](#technical-tests-unit-level-explanation)
      * [Integration level](#technical-tests-integration-level-explanation)
    * [Functional tests](#functional-tests-explanation)
+     * [Slice of repository source code](#functional-tests-explanation-slice)
+     * [Complete repository source code](#functional-tests-explanation-complete)
  * [Rules](#rules)
    * [Early stop](#rules-early-stop)
    * [Strict mode](#rules-strict-mode)
@@ -25,6 +27,8 @@
 <a name="technical-tests-explanation"></a>
 ### Technical tests
 **Contributor/code point of view**
+
+*See [Phpunit implementation](#implementations-phpunit)*
 
 *Will change each time code is updated*
 
@@ -54,17 +58,21 @@ Put here all tests that test :
 ### Functional tests
 **End-user point of view**
 
+*See [Phpunit](#implementations-phpunit) and [Behat](#implementations-behat) implementations*
+
 *Should not change for minor release or hotfix*
 
 Test scope is the "public API" of this repository (testing api payloads or website generated html pages for instance).
 
- * With **Phpunit**
+<a name="functional-tests-explanation-slice"></a>
+ * Slice of repository source code
 
-Test could use a slice of repository source code (to ensure a functionality for instance but without taking in account a "upper level" of code)
+   Test could use a slice of repository source code (to ensure a functionality for instance but without taking in account a "upper level" of code)
 
- * With **Behat**
-
-Tests will use the complete repository source code and will perform tests to cover production end-user actions
+<a name="functional-tests-explanation-complete"></a>
+ * Complete repository source code
+   
+   Tests will use the complete repository source code and will perform tests to cover production end-user actions
 
 ## Rules 
 
