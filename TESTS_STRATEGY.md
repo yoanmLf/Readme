@@ -221,4 +221,4 @@ See [there](https://github.com/yoanm/initRepositoryWithBehat)
 
 <a name="implementations-composer"></a>
 ### Composer
-See [there](https://github.com/yoanm/intRepositoryWithComposer)
+See [there](https://github.com/yoanm/initRepositoryWithComposer)
