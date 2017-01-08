@@ -1,4 +1,4 @@
 # Readme
 Readme container
 
-* [Tests](./Tests.md)
+* [Tests stategy](./TESTS_STRATEGY.md)
