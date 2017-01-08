@@ -195,19 +195,23 @@ A test for ExampleHelper class must have one of the following path and namespace
  * Technical Integration test
     * namespace `Technical\Integration\VendorNamespace\ProjectNamespace\Helper\ExampleHelperTest`
     * path `tests/Technical/Integration/Helper/ExampleHelperTest.php`
- * Functional test - Phpunit only
-    * namespace `Functional\VendorNamespace\ProjectNamespace\Helper\ExampleHelperTest`
-    * path `tests/Functional/Helper/ExampleHelperTest.php`
+ * Functional test
+    * Phpunit
+      * namespace `Functional\VendorNamespace\ProjectNamespace\Helper\ExampleHelperTest`
+      * path `tests/Functional/Helper/ExampleHelperTest.php`
  
- Or
-    * namespace `Functional\VendorNamespace\ProjectNamespace\*TestedFunctionalityName*Test`
-    * path `tests/Functional/*TestedFunctionalityName*Test.php`
+      Or
+      
+      * namespace `Functional\VendorNamespace\ProjectNamespace\*TestedFunctionalityName*Test`
+      * path `tests/Functional/*TestedFunctionalityName*Test.php`
 
+    * Behat
 
-A Behat context must have the following namespace and path:
- * Path `features/bootstrap/MyContext.php`
- * Namespace `Functional\VendorNamespace\ProjectNamespace\BehatContext\MyContext`
- 
+      * A context must have the following namespace and path:
+        * namespace `Functional\VendorNamespace\ProjectNamespace\BehatContext\MyContext`
+        * path `features/bootstrap/MyContext.php`
+      * A feature must have the following path:
+        * Path `features/SOMETHING/functionality.feature`
 
 ## Implementations
 
