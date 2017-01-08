@@ -218,13 +218,4 @@ See [there](https://github.com/yoanm/initRepositoryWithBehat)
 
 <a name="implementations-composer"></a>
 ### Composer
-```json
-  "autoload-dev": {
-    "psr-4": {
-      "Technical\\Unit\\VendorNamespace\\ProjectNamespace\\": "tests/Technical/Unit",
-      "Technical\\Integration\\VendorNamespace\\ProjectNamespace\\": "tests/Technical/Integration",
-      "Functional\\VendorNamespace\\ProjectNamespace\\": "tests/Functional",
-      "Functional\\VendorNamespace\\ProjectNamespace\\BehatContext\\": "features/bootstrap"
-    }
-  }
-```
+See [there](https://github.com/yoanm/intRepositoryWithComposer)
