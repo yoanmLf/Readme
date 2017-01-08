@@ -70,9 +70,9 @@
     
  * [Risky tests](../TESTS_STRATEGY.md#rules-strict-mode-fails-if-risky-tests) (requires [`listener`](#listener))
 
-    * `beStrictAboutOutputDuringTests="true"` ([No Output](../TESTS_STRATEGY.md#rules-risky-tests-output))
-    * `beStrictAboutChangesToGlobalState="true"` ([No globals manipulation](../TESTS_STRATEGY.md#rules-risky-tests-manipulate-globals))
-    * `beStrictAboutTestsThatDoNotTestAnything="true"` ([No test that test nothing](../TESTS_STRATEGY.md#rules-risky-tests-test-nothing))
+    * [No Output](../TESTS_STRATEGY.md#rules-risky-tests-output) with `beStrictAboutOutputDuringTests="true"`
+    * [No globals manipulation](../TESTS_STRATEGY.md#rules-risky-tests-manipulate-globals) with `beStrictAboutChangesToGlobalState="true"`
+    * [No test that test nothing](../TESTS_STRATEGY.md#rules-risky-tests-test-nothing) with `beStrictAboutTestsThatDoNotTestAnything="true"`
 
 #### [Risky test](../TESTS_STRATEGY.md#rules-risky-tests)
 
