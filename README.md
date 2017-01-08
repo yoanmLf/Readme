@@ -13,9 +13,9 @@ Readme container
 <a name="strategy-autoloading"></a>
 ### [Autoloading strategy](./strategy/autoloading/README.md)
 
-    > * [Php]()
-    >   * [Source]()
-    >   * [Dev]()
+   > * [Php]()
+   >   * [Source]()
+   >   * [Dev]()
 
 <a name="strategy-tests"></a>
 ### [Tests stategy](./strategy/tests/README.md)
