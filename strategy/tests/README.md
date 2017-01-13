@@ -113,7 +113,7 @@ Following behavior must turn test into Risky test
    * Except for 0.01% of tests, we now have enought php library to avoid using globals
 <a name="rules-risky-tests-test-nothing"></a>
  * A **test that do not test anything**
-   * Do not allow unnecessary testing to pollute the test class
+   * In order to disallow unnecessary test to pollute the test class
    * Test should probably be completed
 
 <a name="rules-tests-isolation"></a>
