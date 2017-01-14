@@ -126,7 +126,7 @@ A test must not impact another (and so a test must not expect that another has b
 <a name="rules-tests-isolation-globals"></a>
   * **Globals must be backuped and restored between each test**
 <a name="rules-tests-isolation-static-class-member"></a>
-  * **Static class member must be backuped and restored between each test**
+  * *Static class member should be backuped and restored between each test*
 <a name="rules-tests-isolation-different-process"></a>
   * *Test should be launched in different process*
 
