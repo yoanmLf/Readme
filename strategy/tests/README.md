@@ -1,4 +1,4 @@
-# Tests strategy
+# Tests strategy for [PHP](https://php.net)
 
   * [Explanation](#explanation)
     * [Technical tests](#technical-tests-explanation)
@@ -113,7 +113,9 @@ Following behavior must turn test into Risky test
   * A **test that manipulates globals variables**
     * Using globals variables create unexpected behavior
 
-    * Except for 0.01% of tests, we now have enought php library to avoid using globals variables (such as `$GLOBALS`)
+    * Except for 0.01% of projects, we now have enought php library to avoid using globals variables (such as `$GLOBALS`)
+    
+    * *Could be ignored for low level library* (for the 0.01% of projects that really need to deal with globals variables)
 
 <a name="rules-risky-tests-test-nothing"></a>
   * A **test that do not test anything**
