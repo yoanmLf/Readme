@@ -13,7 +13,7 @@ Ansible collection development tips & tricks
 
    -  `Install`_
    -  `Uninstall`_
-   -  `Tipycal error without mirroring`_
+   -  `Typical errors without mirroring`_
 
 Makefile
 --------
