@@ -23,7 +23,7 @@ See `Makefile file <./Makefile>`_.
 Overview
 ~~~~~~~~
 
-.. image:: collection-makefile-overview.png
+.. image:: makefile-overview.png
   :alt: Makefile overview
 
 Alternative to ansible galaxy
@@ -94,8 +94,8 @@ Uninstall
 
    python -m pip uninstall local-ansible-collections
 
-Tipycal error without mirroring
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Typical errors without mirroring
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **MyPy**
 

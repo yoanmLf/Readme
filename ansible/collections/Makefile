@@ -24,10 +24,10 @@ help: ## ❓ Dislay this help
 .PHONY: clean
 clean: ## 🧹 Clean generated contents
 clean:
-	rm -rf build/* tests/output .mypy_cache ${COLLECTION_NAMESPACE}-${COLLECTION_NAME}-*.tar.gz
+	rm -rf ${BUILD_DIR}/* tests/output .mypy_cache ${COLLECTION_NAMESPACE}-${COLLECTION_NAME}-*.tar.gz
 
 .PHONY: configure-dev
-configure-dev: ## 🐍 Install collection's required libraries to current python environment
+configure-dev: ## 🤖 Install collection's required libraries to current python environment
 configure-dev:
 	$(PYTHON) -m pip install -r tests/requirements.txt # Install tests requirements
 	$(PYTHON) -m pip install -r meta/ee-requirements.txt # Install internal requirements
@@ -39,53 +39,72 @@ configure-test-ansible:
 	$(MAKE) install-local path="${ANSIBLE_COLLECTIONS_BUILD_DIR}"
 
 ## —— 🇦 Ansible collection —————————————————————————————————————————————————
+##               \_ 🛰️  Galaxy ——————————————————————————————————————————————
 .PHONY: build
 build: ## 🗜️  Build for galaxy deployment (creates a tar.gz file)
 build: clean
-	ansible-galaxy collection build .
+	@$(eval o ?=)
+	ansible-galaxy collection build $(o) .
 
 .PHONY: install
 install: ## ✍️  Install to default ansible collections directory (to use the collection inside a playbook for instance)
 install: clean
-	ansible-galaxy collection install --force .
+	@$(eval o ?=)
+	ansible-galaxy collection install --force $(o) .
 
+.PHONY: deploy
+deploy: ## 🚀 Deploy to ansible galaxy
+	@echo "TODO"
+##               \_ 📁 Local ———————————————————————————————————————————————
 .PHONY: install-local
-install-local: ## ✍️  Install for dev or tests usage. Example `make install-local path="build/ansible_collections"`
+install-local: ## ✍️  Install for dev or tests usage. Example `make install-local path="path/to/somewhere" o="--no-deps --force"`
 install-local:
-	ansible-galaxy collection install -p $(path) --force .
-
+	@$(eval o ?=)
+	ansible-galaxy collection install -p $(path) $(o) --force .
+##               \_ 🐍 Python ——————————————————————————————————————————————
 .PHONY: install-as-python-pkg
-install-as-python-pkg: ## 🐍 Build the collection and mirror content as python package
-install-as-python-pkg: clean configure-test-ansible
-	cd ${BUILD_DIR} && python3 -c 'from setuptools import setup;setup(name="local-${COLLECTION_NAMESPACE}-${COLLECTION_NAME}-ansible-collections", version="${COLLECTION_VERSION}", package_dir={"": "."}, packages=["ansible_collections"])' develop
+install-as-python-pkg: ## 🔗 Build the collection and mount content as python package to current python environment
+install-as-python-pkg: build_dir=${BUILD_DIR}/python-pkg
+install-as-python-pkg: pkg_name=local-${COLLECTION_NAMESPACE}-${COLLECTION_NAME}-ansible-collections
+install-as-python-pkg: clean
+	rm -rf $(build_dir)/*
+	$(MAKE) install-local path="$(build_dir)/$(pkg_name)" o="--no-deps"
+	cd $(build_dir) && $(PYTHON) -c 'from setuptools import setup;setup(name="$(pkg_name)", version="${COLLECTION_VERSION}", package_dir={"": "$(pkg_name)"}, packages=["ansible_collections"])' develop
 
-#.PHONY: deploy
-#deploy: ## 🚀 Deploy to ansible galaxy
+.PHONY: uninstall-python-pkg
+uninstall-python-pkg: ## 🗑️  Uninstall python package mirroring the project
+uninstall-python-pkg:
+	$(PYTHON)  -m pip uninstall local-${COLLECTION_NAMESPACE}-${COLLECTION_NAME}-ansible-collections
+	$(MAKE) clean
+
 
 ## —— 🧪️ Tests —————————————————————————————————————————————————————————————
 .PHONY: test
 test: ## 🏃 Launch all tests
 test: test-python test-ansible
 
-##                \_ 🐍 Python —————————————————————————————————————————————
+##               \_ 🐍 Python ——————————————————————————————————————————————
 .PHONY: test-python
 test-python: ## 🏃 Launch python-related tests (typehint, lint, etc)
 test-python: test-mypy
 
 .PHONY: test-mypy
+test-mypy: ## 🏃 Launch MyPy checks
 test-mypy:
 	$(PYTHON) -m mypy --config-file mypy.ini .
 
-##                \_ 🇦 Ansible tests ———————————————————————————————————————
+##               \_ 🇦 Ansible tests ————————————————————————————————————————
 .PHONY: test-ansible
 test-ansible: ## 🏃 Launch ansible-related tests (unit, integration and sanity tests)
 test-ansible: configure-test-ansible test-ansible-sanity
 
-#.PHONY: test-ansible-unit
-#deploy: ## 🏃 Launch ansible unit tests
+.PHONY: test-ansible-unit
+test-ansible-unit: ## 🏃 Launch ansible unit tests
+	@echo "TODO"
 
-#.PHONY: test-ansible-integration
-#deploy: ## 🏃 Launch ansible integration tests
+.PHONY: test-ansible-integration
+test-ansible-integration: ## 🏃 Launch ansible integration tests
+	@echo "TODO"
 
 .PHONY: test-ansible-sanity
 test-ansible-sanity: ## 🏃 Launch ansible sanity checks. To target a specific test, execute `make test-ansible-sanity c="--test TEST_NAME"`
